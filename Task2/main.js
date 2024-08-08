@@ -140,3 +140,79 @@ if (time <= 15){
 } else {
     console.log('?????')}
 
+let day = 0;
+if (day <= 10){
+    console.log(1);
+} else if (day <= 20){
+    console.log(2);
+} else if (day <=31){
+    console.log(3);
+} else {
+    console.log('?????')
+}
+
+switch (3){
+    case 1:
+        console.log('Monday');
+        break;
+    case 2:
+        console.log('Tuesday');
+        break;
+    case 3:
+        console.log('Wednsday');
+        break;
+    case 4:
+        console.log('Thursday');
+        break;
+    case 5:
+        console.log('Friday');
+        break;
+    case 6:
+        console.log('Saturday');
+        break;
+    case 7:
+        console.log('Sunday');
+        break;
+    default:
+        console.log('?????')
+}
+
+let z = 4;
+let y = -5;
+if (z > y){
+    console.log(z);
+} else if (z < y){
+    console.log(y);
+} else if (z = y){
+    console.log('=');
+} else{
+    console.log('?????')
+}
+
+let A = !!0;
+if (A === !!0){
+    console.log('default');
+} else if (A === !!''){
+    console.log('default');
+} else if (A === undefined){
+    console.log('default');
+} else if (A === null){
+    console.log('default');
+} else if (A === !!NaN){
+    console.log('default');
+} else{
+    console.log('?????')
+}
+
+let coursesAndDurationArray = [
+    {title: 'JavaScript Complex', monthDuration: 5},
+    {title: 'Java Complex', monthDuration: 6},
+    {title: 'Python Complex', monthDuration: 6},
+    {title: 'QA Complex', monthDuration: 4},
+    {title: 'FullStack', monthDuration: 7},
+    {title: 'Frontend', monthDuration: 4}
+];
+
+if (coursesAndDurationArray[4]['monthDuration'] > 5){
+    console.log('super');
+};
