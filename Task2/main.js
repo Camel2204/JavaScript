@@ -120,15 +120,16 @@ let temperature = [
 console.log(temperature);
 console.log(temperature[6][1]['morning']);
 
-let x = 0;
-
+let x = -3;
 if (x > 0){
     console.log('Virno');
+} else if(x === 0){
+    console.log('Nevirno');
 } else {
-    console.log('Nevirno')
+    console.log('?????')
 }
 
-let time = 59;
+let time = 60;
 if (time <= 15){
     console.log(1);
 } else if (time <= 30){
@@ -140,7 +141,7 @@ if (time <= 15){
 } else {
     console.log('?????')}
 
-let day = 0;
+let day = 19;
 if (day <= 10){
     console.log(1);
 } else if (day <= 20){
@@ -151,7 +152,7 @@ if (day <= 10){
     console.log('?????')
 }
 
-switch (3){
+switch (7){
     case 1:
         console.log('Monday');
         break;
@@ -189,20 +190,15 @@ if (z > y){
     console.log('?????')
 }
 
-let A = !!0;
-if (A === !!0){
-    console.log('default');
-} else if (A === !!''){
-    console.log('default');
-} else if (A === undefined){
-    console.log('default');
-} else if (A === null){
-    console.log('default');
-} else if (A === !!NaN){
-    console.log('default');
-} else{
-    console.log('?????')
-}
+
+
+
+let ix = NaN
+    if (ix){
+        console.log('good');
+    } else {
+        console.log('default')
+    }
 
 let coursesAndDurationArray = [
     {title: 'JavaScript Complex', monthDuration: 5},
@@ -213,6 +209,63 @@ let coursesAndDurationArray = [
     {title: 'Frontend', monthDuration: 4}
 ];
 
+if (coursesAndDurationArray[0]['monthDuration'] > 5){
+    console.log('super');
+}
+if (coursesAndDurationArray[1]['monthDuration'] > 5){
+    console.log('super');
+}
+if (coursesAndDurationArray[2]['monthDuration'] > 5){
+    console.log('super');
+}
+if (coursesAndDurationArray[3]['monthDuration'] > 5){
+    console.log('super');
+}
 if (coursesAndDurationArray[4]['monthDuration'] > 5){
     console.log('super');
-};
+}
+if (coursesAndDurationArray[5]['monthDuration'] > 5){
+    console.log('super');
+}
+
+let zed = 0;
+    if (zed === 0){
+        console.log('nevirno');
+    } else {
+        console.log('virno');
+    }
+
+let user = {
+        id: 1,
+    name: 'vasya',
+    status: true
+}
+    for (let fieldName in user){
+        console.log(fieldName);
+    }
+for (let fieldName in user){
+    console.log(user[fieldName]);
+}
+for (let fieldName in user){
+    console.log(user['status']);
+}
+
+let friends = [
+    {name: 'vasya', age:15, status: true},
+    {name: 'petya', age:16, status: true},
+    {name: 'sasa', age:17, status: true},
+    {name: 'rfrfr', age:19, status: true},
+    {name: 'zaraza', age:15, status: true},
+    {name: 'olya', age:11, status: true},
+    {name: 'ira', age:10, status: true},
+];
+for (const friend of friends){
+    console.log(friend);
+}
+for (const friend of friends){
+    for (const vasya in friend){
+        console.log(fieldName, vasya[name]);
+    }
+    console.log('')
+}
+
