@@ -120,10 +120,10 @@ function printToDocumentList (msg){
                         <li>${msg}</li>
                     </ul>`);
 }
-printToDocumentList('ura');
+printToDocumentList('hello');
 
 const printToDocList = (msg) => document.write
-    й               (`<ul>
+                   (`<ul>
                         <li>${msg}</li>
                         <li>${msg}</li>
                         <li>${msg}</li>
@@ -135,14 +135,14 @@ printToDocList('pryuvet');
 //     Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
 // та виводить його через document.write
 
-function printListToDocument (text, xNam){
-    document.write(`<ul>`)
-    for (let i = 0; i < xNam; i++){
-        document.write(`<li>${text}</li>`);
-    }
-    document.write(`</ul>`);
-}
-printListToDocument('super', 10);
+// function printListToDocument (text, xNam){
+//     document.write(`<ul>`)
+//     for (let i = 0; i < xNam; i++){
+//         document.write(`<li>${text}</li>`);
+//     }
+//     document.write(`</ul>`);
+// }
+// // printListToDocument('Umka', 1000);
 
 const printToDocL = (text, xNam) => {
     document.write(`<ul>`)
@@ -151,5 +151,5 @@ const printToDocL = (text, xNam) => {
     }
     document.write(`</ul>`)
 }
-printToDocL('rest', 4)
+printToDocL('umka', 20)
 
