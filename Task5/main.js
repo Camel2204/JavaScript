@@ -122,13 +122,13 @@ function printToDocumentList (msg){
 }
 printToDocumentList('ura');
 
-const printToDocList = (msg) =>{
-    document.write(`<ul>
+const printToDocList = (msg) => document.write
+    й               (`<ul>
                         <li>${msg}</li>
                         <li>${msg}</li>
                         <li>${msg}</li>
                     </ul>`);
-};
+
 printToDocList('pryuvet');
 
 // -7 створити функцію яка створює ul з  елементами li. Текст li задати через аргумент всім однаковий.
