@@ -153,3 +153,54 @@ const printToDocL = (text, xNam) => {
 }
 printToDocL('umka', 20)
 
+
+//8 - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві),
+//     та будує для них список (ul li) та виводить його через document.write
+
+
+function arrayCool (arr) {
+    document.write(`<ul>`);
+    for (const arrElement of arr) {
+        document.write(`<li>${arrElement}</li>`);
+    }
+    document.write(`</ul>`);
+}
+arrayCool([123, 'yjkldl', true]);
+
+const ArrayCooL = (arr) => {
+       document.write(`<ul>`);
+    for (const items of arr) {
+        document.write(`<li>${items}</li>`);
+    }  document.write(`</ul>`);
+}
+ArrayCooL(['mama', true, 123]);
+
+//9 - створити функцію яка приймає масив об'єктів з наступними полями id,name,age ,' +
+// ' та виводить їх в документ. Для кожного об'єкту окремий блок.
+
+let arrayObj = [
+    {id:1, name: 'Olya', age: 30},
+    {id:2, name: 'Kolya', age: 39},
+    {id:3, name: 'Volya', age: 29},
+    {id:4, name: 'Solo', age: 40},
+    {id:5, name: 'Vova', age: 15},
+    {id:6, name: 'Ignat', age: 17},
+    {id:7, name: 'Nazar', age: 39}
+]
+
+
+function arrayAdd (arr){
+    for (const item of arr){
+        document.write(`<div class="object">${item.id}. ${item.name}, вік - ${item.age} років</div>`);
+    }
+}
+arrayAdd(arrayObj);
+
+document.write(' - ');
+
+const ArrayAdd = (arr) => {
+    for (const item of arr){
+        document.write(`<div class="object">${item.id}. ${item.name}, вік - ${item.age} років</div>`)
+    }
+}
+ArrayAdd(arrayObj);
