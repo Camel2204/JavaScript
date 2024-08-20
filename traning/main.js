@@ -392,18 +392,21 @@ for (const userKey in user){
         }
     }
 }
+
 let simpsons = [
     {name: 'Homer', surname: 'Simpson', age: 40, info: 'tupak', photo: 'https://simpsons.fandom.com/wiki/Homer_Simpson?file=Homer+Simpson.png'},
     {name: 'March', surname: 'Simpson', age: 38, info: 'molodec', photo: 'https://simpsons.fandom.com/wiki/Marge_Simpson?file=Marge+Character+Set.png'},
     {name: 'Bart', surname: 'Simpson', age: 10, info: 'balbes', photo: 'https://futurama.fandom.com/wiki/Bart_Simpson?file=Bart_Simpson.png'},
     {name: 'Lisa', surname: 'Simpson', age: 8, info: 'umnica', photo: 'https://simpsons.fandom.com/wiki/Lisa_Simpson?file=Lisa+Unlock.png'},
-    {name: 'Meggi', surname: 'Simpson', age: 1, info: 'pupsik', photo: 'https://simpsons.fandom.com/wiki/Maggie_Simpson?file=Maggie+Simpson+Tapped+Out.png'},
-];
+    {name: 'Meggi', surname: 'Simpson', age: 1, info: 'pupsik', photo: 'https://simpsons.fandom.com/wiki/Maggie_Simpson?file=Maggie+Simpson+Tapped+Out.png'}
+]
+
 for (const simpson of simpsons){
     document.write(`<div class="simpsons">
                    <h2>${simpson.name} ${simpson.surname} вік - ${simpson.age}</h2>
                    <p>${simpson.info}</p>
-                   <img src="${simpson.photo}"></div>`);
+                   <img src="${simpson.photo}" alt="${simpson.name}">
+                   </div>`);
 };
 
 
