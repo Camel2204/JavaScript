@@ -140,40 +140,157 @@
 
 // _________________________ОБЪЕКТЫ________________
 
-let dog ={
-    name: 'Umka',
-    age: 2,
-    status: true
+// let dog ={
+//     name: 'Umka',
+//     age: 2,
+//     status: true
+// }
+//
+// console.log(dog);
+// console.log(dog.name);
+// console.log(dog.status);
+// console.log(dog['age']);
+// console.log(dog['name']);
+//
+//
+// let kat = {
+//     name: 'Murka',
+//     age: 5,
+//     status: false,
+//     commands: ['sidet', 'fas', 'lezhat']
+// }
+//
+// console.log(kat);
+// console.log(kat.name);
+// console.log(kat["commands"]);
+// console.log(kat.commands[1]);
+// console.log(kat['commands'][2]);
+//
+// dog.poroda = 'jack rasel';
+// console.log(dog);
+// dog['age'] = 3;
+// console.log(dog);
+//
+// kat.poroda = 'pushistaya';
+// kat['name'] = 'Mashka';
+// console.log(kat);
+// kat['commands'][0] = 'day lapu';
+// console.log(kat.commands);
+//
+// // ____________Массив с объектом_____________
+// let user3 = {
+//     username: 'barbos',
+//     surname: 'baranov',
+//     age: 30,
+// }
+//
+// let users =[
+//     {username: 'kokos', surname: 'radionov', age: 25},
+//     {username: 'abricos', surname: 'kretov', age: 45},
+//     user3
+// ]
+// console.log(users);
+// console.log(users[0]);
+// console.log(users[0].age);
+// console.log(users[2]['username']);
+// console.log(users[users.length-2].age);
+//
+// let users1 = [
+//     {username: 'kokos', surname: 'radionov', age: 25},
+//     {username: 'abricos', surname: 'kretov', age: 45},
+//     user3,
+//     {username: 'malinka', surname: 'petrova', age: 25, skills: ['html', 'dizayn', 'photoshop']},
+// ]
+//
+// console.log(users1[3]. skills[1]);
+//
+// let atlet = {
+//     ad: 1,
+//     name: 'Ivan',
+//     age: 13,
+//     roditeli: {
+//         namemathe: 'Natasha',
+//         namefathe: 'Sasha'
+//     }
+// }
+//
+// console.log(atlet.roditeli.namefathe);
+//
+// const obj ={}
+// obj.id = 100500;
+// console.log(obj);
+//
+// let a = 0;
+// let b = a;
+// console.log(b);
+// console.log(a, b);
+// console.log(b = a + 1);
+// console.log(a);
+// console.log(b);
+// let sportik1 ={id:1}
+// let sportik2 = sportik1;
+// console.log(sportik1, sportik2);
+// sportik2 = {id:2};
+// console.log(sportik1, sportik2);
+
+// _________________ЛОГИЧЕСКИЕ РАВЕТВЛЕНИЯ______________
+
+// let b = confirm('davay druzhit');
+// if (b){
+//     console.log('ya ochen rad');
+// } else{
+//     console.log('ochen zhal');
+// }
+
+// let age = +prompt ('enter yor age');
+// if (age>18){
+//     console.log('dobro pozhalovat');
+// } else {
+//     console.log('vam otkazano');
+// }
+
+// let color = prompt ('red? yellow? green?')
+// if (color === 'green'){
+//     console.log('go');
+// } else if (color === 'yellow'){
+//     console.log ('wait');
+// } else if (color === 'red'){
+//     console.log('stop');
+// } else{
+//     console.log('??????');
+// }
+
+let chistayaDoroga = true;
+let color = prompt ('red? yellow? green?')
+// if (color === 'green'){
+//     if (chistayaDoroga){
+//         console.log('go');
+//     } else {
+//         console.log('propusti car and go')
+//     }
+// } else if (color === 'yellow'){
+//     console.log ('wait');
+// } else if (color === 'red'){
+//     console.log('stop');
+// } else{
+//     console.log('?????');
+// }
+
+switch (color){
+    case "green":
+        console.log('go');
+        break;
+    case 'yellow':
+        console.log('wait');
+        break;
+    case 'red':
+        console.log('stop');
+        break;
+    default:
+        console.log('?????')
 }
 
-console.log(dog);
-console.log(dog.name);
-console.log(dog.status);
-console.log(dog['age']);
-console.log(dog['name']);
 
 
-let kat = {
-    name: 'Murka',
-    age: 5,
-    status: false,
-    commands: ['sidet', 'fas', 'lezhat']
-}
 
-console.log(kat);
-console.log(kat.name);
-console.log(kat["commands"]);
-console.log(kat.commands[1]);
-console.log(kat['commands'][2]);
-
-dog.poroda = 'jack rasel';
-console.log(dog);
-dog['age'] = 3;
-console.log(dog);
-
-kat.poroda = 'pushistaya';
-kat['name'] = 'Mashka';
-console.log(kat);
-kat['commands'[0]] = 'day lapu';
-console.log(kat.commands);
 
