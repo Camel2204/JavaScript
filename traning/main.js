@@ -260,8 +260,8 @@
 //     console.log('??????');
 // }
 
-let chistayaDoroga = true;
-let color = prompt ('red? yellow? green?')
+// let chistayaDoroga = true;
+// let color = prompt ('red? yellow? green?')
 // if (color === 'green'){
 //     if (chistayaDoroga){
 //         console.log('go');
@@ -276,21 +276,134 @@ let color = prompt ('red? yellow? green?')
 //     console.log('?????');
 // }
 
-switch (color){
-    case "green":
-        console.log('go');
-        break;
-    case 'yellow':
-        console.log('wait');
-        break;
-    case 'red':
-        console.log('stop');
-        break;
-    default:
-        console.log('?????')
+// switch (color){
+//     case "green":
+//         console.log('go');
+//         break;
+//     case 'yellow':
+//         console.log('wait');
+//         break;
+//     case 'red':
+//         console.log('stop');
+//         break;
+//     default:
+//         console.log('?????')
+//
+
+// ______________________ЦИКЛЫ_________________________
+
+for (let counter = 0; counter<5; counter++){
+    console.log(123);
+}
+for (let counter = 0; counter<5; counter++){
+    console.log(counter);
+}
+let a = [
+    {title: 'JS Complex', day: 5},
+    {title: 'PC', day: 6},
+    {title: 'JS', day: 7},
+    {title: 'F', day: 4},
+    {title: 'JS FR', day: 105},
+]
+for (let i = 0; i < 5; i++){
+    if (a[i].day <= 5){
+        console.log(a[i].title);
+    }
+}
+
+for (let i = 0; i < 5; i++){
+     console.log(a[i]);
+}
+
+for (let i = 0; i < a.length-1; i++){
+    console.log(a[i])
+}
+
+for (let i = 0; i < a.length; i++) {
+    const aElement = a[i];
+}
+
+for (let i = a.length-1; i>0; i--){
+    const aElement = a[i];
+    console.log(aElement);
+}
+
+let users1 = [
+    {username: 'kokos', surname: 'radionov', age: 25},
+    {username: 'abricos', surname: 'kretov', age: 45},
+    {username: 'malinka', surname: 'petrova', age: 25, skills: ['html', 'dizayn', 'photoshop']},
+]
+
+for (let i = 0; i<users1.length; i++) {
+    const user = users1[i];
+    console.log(user);
+}
+for (let i = users1.length; i > 0; i--){
+    const user = users1[i];
+    console.log(user)
 }
 
 
+for (let i = 0; i<users1.length; i++) {
+    const user = users1[i];
+    if (user.age <40){
+        console.log(user);
+    }
+}
 
+let gruppa = [11,22,33,44,55,66,77,88,99,111]
+for (let i = 0; i < gruppa.length; i++) {
+    const gruppaElement = gruppa[i];
+    if ((i>1 && i<5) || (i>8 && i<10)){
+        console.log(gruppaElement);
+    }
+}
+
+for (const item of gruppa){
+    if (item > 5 && item < 70){
+        console.log(item);
+    }
+}
+
+for (const item of a){
+    if (item.day>100){
+        console.log('brehlo')
+    }
+}
+for (let i = 0; i < a.length; i++){
+    const aElement = a[i];
+    if (aElement.day > 100){
+        console.log('zachem vrat?')
+    }
+}
+let user = {
+    id: 1,
+    name: 'Sanys',
+    age: 46,
+    skills: ['html', 'dizayn', 'photoshop']
+}
+console.log(user.name)
+for (const userKey in user){
+     // console.log(user[userKey]);
+     // console.log(userKey, user[userKey])
+    if (Array.isArray(user[userKey])){
+        for (const u of user[userKey]){
+            console.log(u);
+        }
+    }
+}
+let simpsons = [
+    {name: 'Homer', surname: 'Simpson', age: 40, info: 'tupak', photo: 'https://simpsons.fandom.com/wiki/Homer_Simpson?file=Homer+Simpson.png'},
+    {name: 'March', surname: 'Simpson', age: 38, info: 'molodec', photo: 'https://simpsons.fandom.com/wiki/Marge_Simpson?file=Marge+Character+Set.png'},
+    {name: 'Bart', surname: 'Simpson', age: 10, info: 'balbes', photo: 'https://futurama.fandom.com/wiki/Bart_Simpson?file=Bart_Simpson.png'},
+    {name: 'Lisa', surname: 'Simpson', age: 8, info: 'umnica', photo: 'https://simpsons.fandom.com/wiki/Lisa_Simpson?file=Lisa+Unlock.png'},
+    {name: 'Meggi', surname: 'Simpson', age: 1, info: 'pupsik', photo: 'https://simpsons.fandom.com/wiki/Maggie_Simpson?file=Maggie+Simpson+Tapped+Out.png'},
+];
+for (const simpson of simpsons){
+    document.write(`<div class="simpsons">
+                   <h2>${simpson.name} ${simpson.surname} вік - ${simpson.age}</h2>
+                   <p>${simpson.info}</p>
+                   <img src="${simpson.photo}"></div>`);
+};
 
 
