@@ -292,121 +292,212 @@
 
 // ______________________ЦИКЛЫ_________________________
 
-for (let counter = 0; counter<5; counter++){
-    console.log(123);
+// for (let counter = 0; counter<5; counter++){
+//     console.log(123);
+// }
+// for (let counter = 0; counter<5; counter++){
+//     console.log(counter);
+// }
+// let a = [
+//     {title: 'JS Complex', day: 5},
+//     {title: 'PC', day: 6},
+//     {title: 'JS', day: 7},
+//     {title: 'F', day: 4},
+//     {title: 'JS FR', day: 105},
+// ]
+// for (let i = 0; i < 5; i++){
+//     if (a[i].day <= 5){
+//         console.log(a[i].title);
+//     }
+// }
+//
+// for (let i = 0; i < 5; i++){
+//      console.log(a[i]);
+// }
+//
+// for (let i = 0; i < a.length-1; i++){
+//     console.log(a[i])
+// }
+//
+// for (let i = 0; i < a.length; i++) {
+//     const aElement = a[i];
+// }
+//
+// for (let i = a.length-1; i>0; i--){
+//     const aElement = a[i];
+//     console.log(aElement);
+// }
+//
+// let users1 = [
+//     {username: 'kokos', surname: 'radionov', age: 25},
+//     {username: 'abricos', surname: 'kretov', age: 45},
+//     {username: 'malinka', surname: 'petrova', age: 25, skills: ['html', 'dizayn', 'photoshop']},
+// ]
+//
+// for (let i = 0; i<users1.length; i++) {
+//     const user = users1[i];
+//     console.log(user);
+// }
+// for (let i = users1.length; i > 0; i--){
+//     const user = users1[i];
+//     console.log(user)
+// }
+//
+//
+// for (let i = 0; i<users1.length; i++) {
+//     const user = users1[i];
+//     if (user.age <40){
+//         console.log(user);
+//     }
+// }
+//
+// let gruppa = [11,22,33,44,55,66,77,88,99,111]
+// for (let i = 0; i < gruppa.length; i++) {
+//     const gruppaElement = gruppa[i];
+//     if ((i>1 && i<5) || (i>8 && i<10)){
+//         console.log(gruppaElement);
+//     }
+// }
+//
+// for (const item of gruppa){
+//     if (item > 5 && item < 70){
+//         console.log(item);
+//     }
+// }
+//
+// for (const item of a){
+//     if (item.day>100){
+//         console.log('brehlo')
+//     }
+// }
+// for (let i = 0; i < a.length; i++){
+//     const aElement = a[i];
+//     if (aElement.day > 100){
+//         console.log('zachem vrat?')
+//     }
+// }
+// let user = {
+//     id: 1,
+//     name: 'Sanys',
+//     age: 46,
+//     skills: ['html', 'dizayn', 'photoshop']
+// }
+// console.log(user.name)
+// for (const userKey in user){
+//      // console.log(user[userKey]);
+//      // console.log(userKey, user[userKey])
+//     if (Array.isArray(user[userKey])){
+//         for (const u of user[userKey]){
+//             console.log(u);
+//         }
+//     }
+// }
+//
+// let simpsons = [
+//     {name: 'Homer', surname: 'Simpson', age: 40, info: 'tupak', photo: 'https://simpsons.fandom.com/wiki/Homer_Simpson?file=Homer+Simpson.png'},
+//     {name: 'March', surname: 'Simpson', age: 38, info: 'molodec', photo: 'https://simpsons.fandom.com/wiki/Marge_Simpson?file=Marge+Character+Set.png'},
+//     {name: 'Bart', surname: 'Simpson', age: 10, info: 'balbes', photo: 'https://futurama.fandom.com/wiki/Bart_Simpson?file=Bart_Simpson.png'},
+//     {name: 'Lisa', surname: 'Simpson', age: 8, info: 'umnica', photo: 'https://simpsons.fandom.com/wiki/Lisa_Simpson?file=Lisa+Unlock.png'},
+//     {name: 'Meggi', surname: 'Simpson', age: 1, info: 'pupsik', photo: 'https://simpsons.fandom.com/wiki/Maggie_Simpson?file=Maggie+Simpson+Tapped+Out.png'}
+// ]
+//
+// for (const simpson of simpsons){
+//     document.write(`<div class="simpsons">
+//                    <h2>${simpson.name} ${simpson.surname} вік - ${simpson.age}</h2>
+//                    <p>${simpson.info}</p>
+//                    <img src="${simpson.photo}" alt="${simpson.name}">
+//                    </div>`);
+// };
+
+// _____________________ФУНКЦИИ___________________________________
+
+// function square (a,b){
+//     let s = a * b;
+//     return s;
+// }
+
+console.log(square(-2, 2));
+let result = square(12, 2);
+console.log(result)
+
+function square(a,b){
+    if (a>0 && b>0){
+        return a*b;
+    }   return 0;
 }
-for (let counter = 0; counter<5; counter++){
-    console.log(counter);
+
+let arrA = [12,34,56,75, 'rukuku'];
+let arrB = ['rfrfrfr', 123456, true, 'rarara'];
+let arrC = ['micki', 'hellp', 789, false];
+
+for (const arrAElement of arrA){
+    console.log(arrAElement);
 }
-let a = [
-    {title: 'JS Complex', day: 5},
-    {title: 'PC', day: 6},
-    {title: 'JS', day: 7},
-    {title: 'F', day: 4},
-    {title: 'JS FR', day: 105},
-]
-for (let i = 0; i < 5; i++){
-    if (a[i].day <= 5){
-        console.log(a[i].title);
+for (let i =0; i<arrB.length; i++){
+    const arrBElement = arrB[i];
+    console.log(arrBElement);
+}
+
+for(const arrCElement of arrC){
+    console.log(arrCElement);
+}
+
+
+function arrayPrint (arr){
+for (const arrElement of arr){
+    console.log(arrElement)
+}
+}
+arrayPrint(arrA);
+arrayPrint(arrB);
+arrayPrint(arrC);
+
+let arr =[];
+let arrNew =[];
+function addObjectToArray (obj, array){
+    if (array){
+        array[array.length] = obj;
     }
-}
-
-for (let i = 0; i < 5; i++){
-     console.log(a[i]);
-}
-
-for (let i = 0; i < a.length-1; i++){
-    console.log(a[i])
-}
-
-for (let i = 0; i < a.length; i++) {
-    const aElement = a[i];
-}
-
-for (let i = a.length-1; i>0; i--){
-    const aElement = a[i];
-    console.log(aElement);
-}
-
-let users1 = [
-    {username: 'kokos', surname: 'radionov', age: 25},
-    {username: 'abricos', surname: 'kretov', age: 45},
-    {username: 'malinka', surname: 'petrova', age: 25, skills: ['html', 'dizayn', 'photoshop']},
-]
-
-for (let i = 0; i<users1.length; i++) {
-    const user = users1[i];
-    console.log(user);
-}
-for (let i = users1.length; i > 0; i--){
-    const user = users1[i];
-    console.log(user)
-}
-
-
-for (let i = 0; i<users1.length; i++) {
-    const user = users1[i];
-    if (user.age <40){
-        console.log(user);
-    }
-}
-
-let gruppa = [11,22,33,44,55,66,77,88,99,111]
-for (let i = 0; i < gruppa.length; i++) {
-    const gruppaElement = gruppa[i];
-    if ((i>1 && i<5) || (i>8 && i<10)){
-        console.log(gruppaElement);
-    }
-}
-
-for (const item of gruppa){
-    if (item > 5 && item < 70){
-        console.log(item);
-    }
-}
-
-for (const item of a){
-    if (item.day>100){
-        console.log('brehlo')
-    }
-}
-for (let i = 0; i < a.length; i++){
-    const aElement = a[i];
-    if (aElement.day > 100){
-        console.log('zachem vrat?')
-    }
-}
-let user = {
-    id: 1,
-    name: 'Sanys',
-    age: 46,
-    skills: ['html', 'dizayn', 'photoshop']
-}
-console.log(user.name)
-for (const userKey in user){
-     // console.log(user[userKey]);
-     // console.log(userKey, user[userKey])
-    if (Array.isArray(user[userKey])){
-        for (const u of user[userKey]){
-            console.log(u);
-        }
-    }
-}
-
-let simpsons = [
-    {name: 'Homer', surname: 'Simpson', age: 40, info: 'tupak', photo: 'https://simpsons.fandom.com/wiki/Homer_Simpson?file=Homer+Simpson.png'},
-    {name: 'March', surname: 'Simpson', age: 38, info: 'molodec', photo: 'https://simpsons.fandom.com/wiki/Marge_Simpson?file=Marge+Character+Set.png'},
-    {name: 'Bart', surname: 'Simpson', age: 10, info: 'balbes', photo: 'https://futurama.fandom.com/wiki/Bart_Simpson?file=Bart_Simpson.png'},
-    {name: 'Lisa', surname: 'Simpson', age: 8, info: 'umnica', photo: 'https://simpsons.fandom.com/wiki/Lisa_Simpson?file=Lisa+Unlock.png'},
-    {name: 'Meggi', surname: 'Simpson', age: 1, info: 'pupsik', photo: 'https://simpsons.fandom.com/wiki/Maggie_Simpson?file=Maggie+Simpson+Tapped+Out.png'}
-]
-
-for (const simpson of simpsons){
-    document.write(`<div class="simpsons">
-                   <h2>${simpson.name} ${simpson.surname} вік - ${simpson.age}</h2>
-                   <p>${simpson.info}</p>
-                   <img src="${simpson.photo}" alt="${simpson.name}">
-                   </div>`);
 };
+addObjectToArray({name: 'serega', age: 23, status: false},arr);
+console.log(arr);
+addObjectToArray({name: 'vova', age: 25, status: true},arr);
+addObjectToArray({name: 'saha', age: 46, status: true},arr);
+console.log(arr)
+console.log(arr[1].name)
 
+addObjectToArray({name: 'kolyzn', age: 134},arrNew);
+console.log(arrNew);
+addObjectToArray({id:9}, arr);
 
+function printToDocument(msg, tag){
+    document.write(`<${tag}>${msg}</${tag}`);
+};
+printToDocument('Privet vsem!', 'div class="proba"');
+
+function foobar (a,b,c){
+    if (a && b && !c){
+        return a+b;
+    }else if (a && b && c){
+        return a+b-c;
+    }
+}
+
+console.log(foobar(12, 23));
+console.log(foobar(12, 23, 10));
+
+function boofar (a,b,c){
+    if (arguments.length === 2){
+        return arguments[0]+arguments[1];
+    } else if (arguments.length === 3){
+        return arguments[0]+arguments[1]-arguments[2];
+    }
+}
+
+console.log(boofar(2, 3));
+console.log(boofar(2, 3, 4));
+
+function footbar (...das){
+    console.log(das);
+}
+footbar(1,43,56,'kuku')
