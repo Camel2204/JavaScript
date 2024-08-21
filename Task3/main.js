@@ -60,6 +60,7 @@ while (box<20){
 let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
 for (let j = 0; j < listOfItems.length; j++) {
     const listOfItem = listOfItems[j];
+
     document.write(`<div><ul><li>${listOfItem}</li></ul></div>`);
 };
 

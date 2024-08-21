@@ -416,88 +416,182 @@
 //     return s;
 // }
 
-console.log(square(-2, 2));
-let result = square(12, 2);
-console.log(result)
+// console.log(square(-2, 2));
+// let result = square(12, 2);
+// console.log(result)
+//
+// function square(a,b){
+//     if (a>0 && b>0){
+//         return a*b;
+//     }   return 0;
+// }
+//
+// let arrA = [12,34,56,75, 'rukuku'];
+// let arrB = ['rfrfrfr', 123456, true, 'rarara'];
+// let arrC = ['micki', 'hellp', 789, false];
+//
+// for (const arrAElement of arrA){
+//     console.log(arrAElement);
+// }
+// for (let i =0; i<arrB.length; i++){
+//     const arrBElement = arrB[i];
+//     console.log(arrBElement);
+// }
+//
+// for(const arrCElement of arrC){
+//     console.log(arrCElement);
+// }
+//
+//
+// function arrayPrint (arr){
+// for (const arrElement of arr){
+//     console.log(arrElement)
+// }
+// }
+// arrayPrint(arrA);
+// arrayPrint(arrB);
+// arrayPrint(arrC);
+//
+// let arr =[];
+// let arrNew =[];
+// function addObjectToArray (obj, array){
+//     if (array){
+//         array[array.length] = obj;
+//     }
+// };
+// addObjectToArray({name: 'serega', age: 23, status: false},arr);
+// console.log(arr);
+// addObjectToArray({name: 'vova', age: 25, status: true},arr);
+// addObjectToArray({name: 'saha', age: 46, status: true},arr);
+// console.log(arr)
+// console.log(arr[1].name)
+//
+// addObjectToArray({name: 'kolyzn', age: 134},arrNew);
+// console.log(arrNew);
+// addObjectToArray({id:9}, arr);
+//
+// function printToDocument(msg, tag){
+//     document.write(`<${tag}>${msg}</${tag}`);
+// };
+// printToDocument('Privet vsem!', 'div class="proba"');
+//
+// function foobar (a,b,c){
+//     if (a && b && !c){
+//         return a+b;
+//     }else if (a && b && c){
+//         return a+b-c;
+//     }
+// }
+//
+// console.log(foobar(12, 23));
+// console.log(foobar(12, 23, 10));
+//
+// function boofar (a,b,c){
+//     if (arguments.length === 2){
+//         return arguments[0]+arguments[1];
+//     } else if (arguments.length === 3){
+//         return arguments[0]+arguments[1]-arguments[2];
+//     }
+// }
+//
+// console.log(boofar(2, 3));
+// console.log(boofar(2, 3, 4));
+//
+// function footbar (...das){
+//     console.log(das);
+// }
+// footbar(1,43,56,'kuku')
+// ____________________________ЛЕКЦИЯ 5___________________________
 
-function square(a,b){
-    if (a>0 && b>0){
-        return a*b;
-    }   return 0;
-}
+// function сalculator (a,b){
+//     return a + b;
+// }
+// const calculator1 = (a,b)=>{
+//     return a + b;
+// }
+// const calculator2 = (a,b)=>a+b;
+// const calculator3 = (a,b) => console.log(a+b);
+// calculator3(123,3)
 
-let arrA = [12,34,56,75, 'rukuku'];
-let arrB = ['rfrfrfr', 123456, true, 'rarara'];
-let arrC = ['micki', 'hellp', 789, false];
+// _____________________ФУНКЦИИ В  ОБЪЕКТЕ______________
 
-for (const arrAElement of arrA){
-    console.log(arrAElement);
-}
-for (let i =0; i<arrB.length; i++){
-    const arrBElement = arrB[i];
-    console.log(arrBElement);
-}
+// let user ={
+//     id: 1,
+//     name: "Alex",
+//     greeting: function (msg){
+//         console.log("hello", msg);
+//     }
+// }
+// user.greeting('drug')
 
-for(const arrCElement of arrC){
-    console.log(arrCElement);
-}
+// let user ={
+//     id: 1,
+//     name: 'Vasya',
+//     greeting: (msg)=>{
+//         console.log('hello', msg);
+//     }
+// }
+// user.greeting('moy svet')
+//
+// console.log(user)
+//
+// let user = {
+//     id:1,
+//     name: 'Stan',
+//     greeting: function (msg){
+//         console.log('hello', msg, this.name);
+//     }
+// }
+// user.greeting('drug');
+// let arrUsers = [];
+// function userBilder (id, name, arr){
+//    arr[arr.length] = {
+//        id: id,
+//        name: name,
+//    }
+//    return arr
+// }
+//
+// userBilder(1, 'petya', arrUsers );
+// console.log(arrUsers);
+// userBilder(2, 'senya', arrUsers);
+// userBilder(3, 'yura', arrUsers);
 
+// function userBuilder (id, name){
+//     let user = {
+//         id,
+//         name,
+//     }
+//     return
+//     {
+//         getId() => {
+//             console.log(user.id);
+//     },
+//         getName() => {
+//             console.log(user.name);
+//     }, setId (id) {
+//             if (id > 0){
+//                 user.id = id;
+//             }
+//     }, setName(name) {
+//             if (name){
+//                 user.name = name;
+//             }
+//     }, getObjCopy(){
+//             return{
+//                 id: user.id,
+//                 name: user.name,
+//             }
+//     }
+//     }
+// }
 
-function arrayPrint (arr){
-for (const arrElement of arr){
-    console.log(arrElement)
-}
-}
-arrayPrint(arrA);
-arrayPrint(arrB);
-arrayPrint(arrC);
-
-let arr =[];
-let arrNew =[];
-function addObjectToArray (obj, array){
-    if (array){
-        array[array.length] = obj;
-    }
-};
-addObjectToArray({name: 'serega', age: 23, status: false},arr);
-console.log(arr);
-addObjectToArray({name: 'vova', age: 25, status: true},arr);
-addObjectToArray({name: 'saha', age: 46, status: true},arr);
-console.log(arr)
-console.log(arr[1].name)
-
-addObjectToArray({name: 'kolyzn', age: 134},arrNew);
-console.log(arrNew);
-addObjectToArray({id:9}, arr);
-
-function printToDocument(msg, tag){
-    document.write(`<${tag}>${msg}</${tag}`);
-};
-printToDocument('Privet vsem!', 'div class="proba"');
-
-function foobar (a,b,c){
-    if (a && b && !c){
-        return a+b;
-    }else if (a && b && c){
-        return a+b-c;
-    }
-}
-
-console.log(foobar(12, 23));
-console.log(foobar(12, 23, 10));
-
-function boofar (a,b,c){
-    if (arguments.length === 2){
-        return arguments[0]+arguments[1];
-    } else if (arguments.length === 3){
-        return arguments[0]+arguments[1]-arguments[2];
-    }
-}
-
-console.log(boofar(2, 3));
-console.log(boofar(2, 3, 4));
-
-function footbar (...das){
-    console.log(das);
-}
-footbar(1,43,56,'kuku')
+// let manipulatorUBuilder1 = userBuilder(1, 'Varya')
+//
+// manipulatorUBuilder1.getId();
+// // // manipulatorUBuilder1.getName();
+// // // userBuilder(2, 'vika').getId();
+// //
+// // manipulatorUBuilder1.setId(32)
+// let userCopy = manipulatorUBuilder1.getObjCope ;
+// console.log(userCopy)
