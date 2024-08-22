@@ -142,3 +142,92 @@ let mapResultArray = resultFilterArray.map((cours, index) => {
     return obj;
 })
 console.log(mapResultArray);
+
+// 9 описати колоду карт (від 6 до туза без джокерів)
+
+//
+// {
+//     cardSuit: '', // 'spade' пики, 'diamond' буб,'heart'чир, 'clubs'крести
+//         value: '', // '6'-'10', 'ace','jack','queen','king'
+//     color:'', // 'red','black'
+// }
+
+// let cards =[
+//     {cardSuit: 'spade', value: '6', color: 'black'},
+//     {cardSuit: 'spade', value: '7', color: 'black'},
+//     {cardSuit: 'spade', value: '8', color: 'black'},
+//     {cardSuit: 'spade', value: '9', color: 'black'},
+//     {cardSuit: 'spade', value: '10', color: 'black'},
+//     {cardSuit: 'spade', value: 'jack', color: 'black'},
+//     {cardSuit: 'spade', value: 'queen' color: 'black'},
+//     {cardSuit: 'spade', value: 'king', color: 'black'},
+//     {cardSuit: 'spade', value: 'ace', color: 'black'},
+//
+//     {cardSuit: 'diamond', value: '6', color: 'red'},
+//     {cardSuit: 'diamond', value: '7', color: 'red'},
+//     {cardSuit: 'diamond', value: '8', color: 'red'},
+//     {cardSuit: 'diamond', value: '9', color: 'red'},
+//     {cardSuit: 'diamond', value: '10', color: 'red'},
+//     {cardSuit: 'diamond', value: 'jack', color: 'red'},
+//     {cardSuit: 'diamond', value: 'queen' color: 'red'},
+//     {cardSuit: 'diamond', value: 'king', color: 'red'},
+//     {cardSuit: 'diamond', value: 'ace', color: 'red'},
+//
+//     {cardSuit: 'heart', value: '6', color: 'red'},
+//     {cardSuit: 'heart', value: '7', color: 'red'},
+//     {cardSuit: 'heart', value: '8', color: 'red'},
+//     {cardSuit: 'heart', value: '9', color: 'red'},
+//     {cardSuit: 'heart', value: '10', color: 'red'},
+//     {cardSuit: 'heart', value: 'jack', color: 'red'},
+//     {cardSuit: 'heart', value: 'queen' color: 'red'},
+//     {cardSuit: 'heart', value: 'king', color: 'red'},
+//     {cardSuit: 'heart', value: 'ace', color: 'red'},
+//
+//     {cardSuit: 'clubs', value: '6', color: 'black'},
+//     {cardSuit: 'clubs', value: '7', color: 'black'},
+//     {cardSuit: 'clubs', value: '8', color: 'black'},
+//     {cardSuit: 'clubs', value: '9', color: 'black'},
+//     {cardSuit: 'clubs', value: '10', color: 'black'},
+//     {cardSuit: 'clubs', value: 'jack', color: 'black'},
+//     {cardSuit: 'clubs', value: 'queen' color: 'black'},
+//     {cardSuit: 'clubs', value: 'king', color: 'black'},
+//     {cardSuit: 'clubs', value: 'ace', color: 'black'},
+// ];
+// // знайти піковий туз
+// // - всі шістки
+// // - всі червоні карти
+// // - всі буби
+// // - всі трефи від 9 та більше
+//
+// let cardsFilter = cards.filter(function (card){
+//     if (card.value === '6'){
+//         return card;
+//     }
+// });
+// console.log(cardsFilter);
+
+const suits = ['spade', 'diamond','heart', 'clubs'];
+const values = ['6', '7', '8', '9', '10', 'jack','queen','king', 'ace'];
+const cards =[];
+for (const suit of suits){
+    for (const value of values){
+        const card = {cardSuit: suit, value: value};
+       if (suit === 'heart' || suit === 'diamond'){
+           card.color = 'red';
+       } else {
+           card.color = 'black';
+       }
+       cards.push(card);
+    }
+}
+console.log(cards)
+console.log(cards.find(card => card.value === 'ace' && card.cardSuit === 'spade'));
+
+//  let resaltFilter = cards.filter(function (card){
+//     return  card.value === '6';
+// })
+// console.log(resaltFilter);
+console.log(cards.filter(card => card.value === '6'));
+console.log(cards.filter(card => card.color === 'red'));
+console.log(cards.filter(card => card.cardSuit === 'diamond'));
+console.log(cards.filter(card => card.cardSuit === 'clubs' && card.value !== '6' && card.value !== '7' && card.value !== '8'));

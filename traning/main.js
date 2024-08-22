@@ -595,3 +595,132 @@
 // // manipulatorUBuilder1.setId(32)
 // let userCopy = manipulatorUBuilder1.getObjCope ;
 // console.log(userCopy)
+
+// ______________методы стрингов__________________________
+
+// let str = 'hello my friends';
+// console.log(str);
+// console.log(str[0]);
+// for (const strElement of str){
+//     console.log(strElement);
+// }
+// let s = str.concat(' I love you');
+// console.log(s)
+// let split = s.split(' ');
+// console.log(split);
+
+// _________МЕТОДЫ МАССИВОВ____________________________________
+
+// let arr =[];
+// console.log(Array.isArray(arr));
+// let obj = {};
+// console.log(Array.isArray(obj));
+//
+// arr.push('mama myla ramu');
+// console.log(arr);
+// arr.push('sohlo dolgo');
+//
+// const pop = arr.pop();
+// console.log(pop);
+// console.log(arr)
+// arr.unshift('vchera ves den');
+// console.log(arr);
+// let shift = arr.shift();
+// console.log(arr);
+// console.log(shift);
+// arr.unshift('vchera ves den');
+// let s = arr.join();
+// console.log(s);
+// console.log(arr);
+//
+// let arr2 =[]
+// arr2.push('papa tozhe rabotal');
+// let arr3 = arr.concat(arr2);
+// console.log(arr3);
+// let wis = arr3.join();
+// console.log(wis);
+// let revers = arr3.reverse();
+// console.log(arr3);
+// console.log(revers);
+// arr3.reverse()
+// console.log(arr3);
+// console.log(arr3.slice(1));
+// console.log(arr3);
+//
+// let removedItem = arr3.splice(0,1, 'segodnya')
+// console.log(removedItem);
+// console.log(arr3);
+// _____________________ЧАСТЬ ____________________________
+//
+// let users =[
+//     {name: 'vasya', age: 31, status: false},
+//     {name: 'petya', age: 30, status: true},
+//     {name: 'tanya', age: 39, status: false},
+//     {name: 'sanya', age: 46, status: true},
+//     {name: 'vanya', age: 54, status: true},
+//     {name: 'anya', age: 31, status: false},
+//     {name: 'katya', age: 20, status: false},
+//     {name: 'julya', age: 21, status: true},
+//     {name: 'serg', age: 61, status: false},
+//     {name: 'styepa', age: 19, status: false},
+// ];
+// users.forEach(function (value){
+//     console.log(value);
+// })
+//
+// let resultUsArr = users.filter(function (user){
+//     return user.age > 40;
+// });
+// console.log(resultUsArr)
+
+// let mapResultArr=  users.map(user => user.age);
+// console.log(mapResultArr);
+
+// let mapResultArr = users.map((user, index)=>{
+//     user.id = index+1;
+//     return index;
+// })
+//
+// console.log(users);
+
+//
+// let mapResultArr = users.map((user, index)=>{
+//     let obj ={
+//         id: index+1,
+//         name: user.name,
+//         age: user.age,
+//         status: user.status
+//     }
+//     return obj
+// })
+//
+// console.log(mapResultArr);
+//
+// let reduseArr = users.reduce((accumulator, user)=>{
+//     if(user.status){
+//         accumulator[0].push(user);
+//     } else{
+//         accumulator[1].push(user);
+//     }
+//     return accumulator;
+// }, [[],[]]);
+// console.log(reduseArr);
+
+// _____________________КОНСТРУКТОРЫ___________________________
+
+// function User (id, name){
+//     this.id = id;
+//     this.name = name;
+// }
+// let user1 = new User(1, 'sanya');
+// console.log(user1);
+
+class User{
+    constructor(id,name) {
+        this.id = id;
+        this.name = name;
+    }
+}
+let user1 = new User(2, 'vasya');
+console.log(user1);
+
