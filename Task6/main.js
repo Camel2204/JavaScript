@@ -231,3 +231,109 @@ console.log(cards.filter(card => card.value === '6'));
 console.log(cards.filter(card => card.color === 'red'));
 console.log(cards.filter(card => card.cardSuit === 'diamond'));
 console.log(cards.filter(card => card.cardSuit === 'clubs' && card.value !== '6' && card.value !== '7' && card.value !== '8'));
+
+// Взяти описану колоду карт, та за допомоги reduce упакувати всі карти по "мастях" в об'єкт
+// {
+//     spades:[],
+//         diamonds:[],
+//     hearts:[],
+//     clubs:[]
+// }
+
+let cardsReduceArr = cards.reduce((accumulator, card)=>{
+    if (card.cardSuit === 'spade'){
+        accumulator.spades.push(card);
+    } else if (card.cardSuit === 'diamond'){
+        accumulator.diamonds.push(card);
+    } else if (card.cardSuit === 'heart'){
+        accumulator.hearts.push(card);
+    } else {
+        accumulator.clubs.push(card);
+    }
+    return accumulator;
+}, {spades: [], diamonds:[], hearts: [], clubs: []
+
+});
+console.log(cardsReduceArr);
+
+
+
+let coursesArray = [
+    {
+        title: 'JavaScript Complex',
+        monthDuration: 5,
+        hourDuration: 909,
+        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js']
+    },
+    {
+        title: 'Java Complex',
+        monthDuration: 6,
+        hourDuration: 909,
+        modules: ['html',
+            'css',
+            'js',
+            'mysql',
+            'mongodb',
+            'angular',
+            'aws',
+            'docker',
+            'git',
+            'java core',
+            'java advanced']
+    },
+    {
+        title: 'Python Complex',
+        monthDuration: 6,
+        hourDuration: 909,
+        modules: ['html',
+            'css',
+            'js',
+            'mysql',
+            'mongodb',
+            'angular',
+            'aws',
+            'docker',
+            'python core',
+            'python advanced']
+    },
+    {
+        title: 'QA Complex',
+        monthDuration: 4,
+        hourDuration: 909,
+        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'git', 'QA/QC']
+    },
+    {
+        title: 'FullStack',
+        monthDuration: 7,
+        hourDuration: 909,
+        modules: ['html',
+            'css',
+            'js',
+            'mysql',
+            'mongodb',
+            'react',
+            'angular',
+            'aws',
+            'docker',
+            'git',
+            'node.js',
+            'python',
+            'java']
+    },
+    {
+        title: 'Frontend',
+        monthDuration: 4,
+        hourDuration: 909,
+        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
+    }
+];
+
+// взяти з arrays.js масив coursesArray
+// --написати пошук всіх об'єктів, в яких в modules є sass
+// --написати пошук всіх об'єктів, в яких в modules є docker
+
+let coursesArrayFilter = coursesArray.filter(function (curs){
+    return curs.modules.includes('docker');
+})
+
+console.log(coursesArrayFilter);
