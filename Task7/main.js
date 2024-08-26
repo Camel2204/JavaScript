@@ -178,11 +178,58 @@ const cinderellas =[
     new Cinderella('Lyusya', 17, 36),
     new Cinderella('Kira', 10, 29),
     new Cinderella('Polina', 19, 38),
-    new Cinderella('Katya', 21, 38),
+    new Cinderella('Katya', 21, 36),
 ]
 console.log(cinderellas);
 
 class Princ {
-    constructor(name, ) {
+    constructor(name, age, shoesSize) {
+        this.name = name;
+        this.age = age;
+        this.shoesSize = shoesSize;
+    };
+}
+let princ = new Princ('Ivan', 25, 34);
+console.log(princ);
+
+for (const cinderella of cinderellas){
+    if (cinderella.size === princ.shoesSize){
+        console.log(cinderella);
     }
 }
+
+let bride = cinderellas.find(cinderella=> cinderella.size === princ.shoesSize);
+console.log(bride);
+
+// *Через Array.prototype. створити власний foreach, filter
+
+Array.prototype.myForEach = function (callback){
+    const yourArray = this;
+    for (const item of yourArray){
+        callback(item);
+    }
+}
+
+
+let proba =[
+    11,22,33,44
+]
+proba.myForEach((x)=> document.write(x));
+
+Array.prototype.myFilter = function (predicate){
+const arr =[];
+    for (const item of this){
+        if (predicate(item)){
+            arr.push(item);
+        }
+    }
+    return arr;
+}
+
+cinderellas.myFilter((cinderella)=>{
+    if (cinderella.age > 20){
+        proba.push(cinderella);
+    }
+})
+
+console.log(proba);
