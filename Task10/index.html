@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task10</title>
+    <style>
+        /*div#text{*/
+        /*    width: 200px;*/
+        /*    height: 200px;*/
+        /*    background: orange;*/
+        /*    margin: 20px;*/
+        
+        /*}*/
+        /*.text_null{*/
+        /*    display: none;*/
+        /*}*/
+        /*button{*/
+        /*    width: 80px;*/
+        /*    height: 30px;*/
+        /*    margin-left: 80px;*/
+        /*}*/
+    /*.btn{*/
+    /*width: 50px;*/
+    /*    height: 20px;*/
+    /*    background-color: orange;*/
+    /*    border: none;*/
+    /*    border-radius: 6px;*/
+    /*}*/
+    /*    h2{*/
+    /*        color: red;*/
+    /*        display: none;*/
+
+    /*    }*/
+    /*   */
+    /*    .f1{*/
+    /*        display: flex;*/
+    /*        flex-direction: column;*/
+    /*    }*/
+    /*    .f1>input{*/
+    /*        margin-bottom: 5px;*/
+    /*        width: 200px;*/
+    /*    }*/
+    /*    .btn1{*/
+    /*        width: 50px;*/
+    /*        height: 20px;*/
+    /*        background-color: orange;*/
+    /*        border: none;*/
+    /*        border-radius: 6px;*/
+    /*    }*/
+    /*#number{*/
+    /*    width: 100px;*/
+    /*    height: 100px;*/
+    /*    background: rgba(255, 165, 0, 0.63);*/
+    /*    margin: 30px;*/
+    /*    display: flex;*/
+    /*    justify-content: center;*/
+    /*    align-items: center;*/
+    /*}*/
+
+    </style>
+</head>
+<body>
+<!--<div id="text"></div>-->
+<!--<button></button>-->
+
+<!--<form name="form">-->
+<!--    <label for = "age">Ввідіть свій вік</label> <br>-->
+<!--    <input type ="number" name ="age" id = "age">-->
+<!--    <button class="btn">Send</button>-->
+<!--</form>-->
+<!--<h2 class="msg">Вам требо подорослішати</h2>-->
+
+<!--<form   name = "formUser" class="f1">-->
+<!--    <input type="text" name = "name" placeholder="Name">-->
+<!--    <input type="text" name = "surname" placeholder="Surname">-->
+<!--    <input type="number" name = "age" placeholder="age">-->
+<!--    <button class="btn1">Send</button>-->
+
+<!--</form>-->
+<!--<div id = "target"></div>-->
+
+
+<!--<div id = "number">-->
+<!--    <p>1</p>-->
+<!--</div>-->
+
+<!--<form name="form">-->
+<!--    <input type = "number" name = "number">-->
+
+<!--</form>-->
+<!--<div id="result"></div>-->
+<form name="enter">
+    <input type="number" name="string" id="string">
+    <input type="number" name="cell" id="cell">
+    <input type="text" name="info" id="info">
+    <button>generate</button>
+</form>
+<table id="table">
+
+</table>
+
+
+<script>
+    let sessionsList = JSON.parse(localStorage.getItem('sessionsList')) || [];
+    sessionsList.push(new Date());
+    localStorage.setItem('sessionsList', JSON.stringify(sessionsList));
+</script>
+
+<script src="main.js"></script>
+</body>
+</html>
