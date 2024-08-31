@@ -56,8 +56,8 @@
 //
 // є сторінка, на якій є блок, я кому знаходиьтся цифра. написати код, який при кожному перезавантажені сторінки буде додавати до неї +1
 
-let numberDiv = document.getElementById('number');
-let numbInDiv = document.getElementsByTagName('p')[0];
+// let numberDiv = document.getElementById('number');
+// let numbInDiv = document.getElementsByTagName('p')[0];
 
 // let currantNumber = +localStorage.getItem('number');
 // currantNumber += 1;
@@ -71,19 +71,19 @@ let numbInDiv = document.getElementsByTagName('p')[0];
 // створити конвертор ваги з кг в фунти. данні заповнюються через інпут. При введенні
 // даних обрахунок стається миттєво, без натискань додаткових кнопок
 
-let form = document.forms[0];
-console.log(form);
-let input = form.number;
-console.log(input);
-
-
-let resDiv = document.getElementById('result');
-input.oninput = function() {
-    const kilos = +this.value;
-    let resalt = kilos*2.2;
-    resDiv.innerText = resalt;
-
-}
+// let form = document.forms[0];
+// console.log(form);
+// let input = form.number;
+// console.log(input);
+//
+//
+// let resDiv = document.getElementById('result');
+// input.oninput = function() {
+//     const kilos = +this.value;
+//     let resalt = kilos*2.2;
+//     resDiv.innerText = resalt;
+//
+// }
 
 // В localStorage зберігаються масиви. Вам потрібно зробити функцію, які дістає
 // потрібний вам масив з localStorage та додає в нього об'єкт
@@ -109,12 +109,43 @@ input.oninput = function() {
 //     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з
 // відповідним вмістом.
 
-let enterForm = document.forms['enter'];
+// let enterForm = document.forms['enter'];
+// console.log(enterForm);
+//
+//
+// let tbl = document.getElementById('table');
+//
+//
 
-let tbl = document.getElementById('table');
-let stringValue = +tbl.string.value;
-let cellValue = +tbl.cell.value;
-let infoValue = tbl.info.value;
+
+// enterForm.onsubmit = function (e){
+//     tbl.innerText = '';
+//     e.preventDefault();
+//     const stringValue = +enterForm.string.value;
+//     const cellValue = +enterForm.cell.value;
+//     const infoValue = enterForm.info.value;
+//     console.log(stringValue, cellValue, infoValue);
+//
+//     for (let i = 0; i < stringValue; i++) {
+//        const tr = document.createElement('tr');
+//
+//         for (let j = 0; j < cellValue; j++) {
+//             const td = document.createElement('td');
+//             td.innerText = infoValue;
+//             tbl.appendChild(td);
+//         }
+//         tbl.appendChild(tr);
+//     }
+// }
+
+// *** (подібне було вище, але...будьте уважні в другій частині) створити сторінку з
+// довільним блоком, в середині якого є значення "100грн"
+// при перезавантаженні сторінки до значаення додається по 10грн, але !!!
+//     зміна ціни відбувається тільки на перезавантаження, які відбулись пізніше ніж 10
+// секунд після попереднього.
+//     При перезавантаженні, яке відбулось раніше ніж минуло 10 секунд - нічого не
+// відбувається
+
 
 
 
