@@ -723,4 +723,26 @@ class User{
 }
 let user1 = new User(2, 'vasya');
 console.log(user1);
+let list = document.getElementById('list');
+fetch('https://jsonplaceholder.typicode.com/users')
+    .then((response)=> response.json())
+    .then((users)=> {
+        for(const user of users){
+            let li = document.createElement('li');
+            li.innerText = `${user.id} : ${user.username}`;
+            list.appendChild(li);
+
+        }
+    })
+
+fetch('https://jsonplaceholder.typicode.com/users',  {
+    method: 'POST',
+    body: JSON.stringify({
+    name: 'kokos',
+    username: 'abricos'
+    }),
+    'content-type': 'application/json; charset=UTF-8'
+})
+    .then((response)=> response.json())
+    .then((users) => console.log(users));
 
