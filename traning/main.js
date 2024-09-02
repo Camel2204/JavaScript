@@ -725,24 +725,70 @@ let user1 = new User(2, 'vasya');
 console.log(user1);
 let list = document.getElementById('list');
 fetch('https://jsonplaceholder.typicode.com/users')
-    .then((response)=> response.json())
-    .then((users)=> {
-        for(const user of users){
+    .then ((response) => response.json())
+    .then ((users)=> {
+        for (const user of users){
             let li = document.createElement('li');
-            li.innerText = `${user.id} : ${user.username}`;
+            li.innerText = `${user.id} : ${user.name} , ${user.email}`;
             list.appendChild(li);
-
         }
-    })
+    });
 
 fetch('https://jsonplaceholder.typicode.com/users',  {
-    method: 'POST',
+  method: 'POST',
     body: JSON.stringify({
-    name: 'kokos',
-    username: 'abricos'
-    }),
+    name: 'Inokentiy',
+    username: 'Kesha'}),
     'content-type': 'application/json; charset=UTF-8'
 })
-    .then((response)=> response.json())
-    .then((users) => console.log(users));
+    .then ((response) => response.json())
+    .then((value) => console.log(value))
+
+let skip = 0;
+let nextButton = document.getElementsByTagName('button')[0];
+let productsContainer = document.getElementById('products');
+
+// nextButton.onclick = function (){
+//     productsContainer.innerText = '';
+//     fetch(`https://dummyjson.com/products?skip=${skip}&limit=10`)
+//         .then(res => res.json())
+//         .then(value => {
+//         let {products} = value;
+//         for (const product of products){
+//             let singleProdDiv = document.createElement('div');
+//             singleProdDiv.innerText = `${product.id} ${product.title}`;
+//             productsContainer.appendChild(singleProdDiv);
+//         }
+//         });
+//     skip +=10;
+// }
+
+let url = new URL('https://dummyjson.com/products');
+url.searchParams.append('skip', skip);
+url.searchParams.append('limit', 10);
+
+
+
+
+nextButton.onclick = function (){
+    productsContainer.innerText = '';
+    fetch(`https://dummyjson.com/products?skip=${skip}&limit=10`)
+        .then(res => res.json())
+        .then(value => {
+        let {products} = value;
+        for (const product of products){
+            let singleProdDiv = document.createElement('div');
+            singleProdDiv.innerText = `${product.id} ${product.title}`;
+            productsContainer.appendChild(singleProdDiv);
+        }
+        });
+    skip +=10;
+}
+
+
+
+
+
+
+
 
