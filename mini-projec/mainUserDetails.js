@@ -51,3 +51,21 @@ console.log(valueUser)
 const parse = JSON.parse(valueUser);
 console.log(parse);
 
+
+// fetch('https://jsonplaceholder.typicode.com/users')
+//     .then(response => response.json())
+//     .then(usersArray => {
+//         for (const user of usersArray){
+//             console.log(user)
+//             for (const userKey in user)
+//                 console.log(userKey)
+//             if (typeof user[userKey] !== 'object'){
+//                 const divContainer = document.createElement('div')
+//                 divContainer.classList.add('user-container')
+//                 const divWithInfo = document.createElement('div');
+//                 divWithInfo.classList.add('user-info')
+//                 divWithInfo.innerText = `${uerKey} ${user[userKey]}
+//
+//                }
+//             }
+// })
