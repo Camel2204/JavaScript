@@ -17,7 +17,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
             divContainer.appendChild(divWithInfo);
             usersBook.appendChild(divContainer);
             buttonAllInfo.addEventListener ("click", function (){
-                document.location = `user-details.html?info=${JSON.stringify(user)}`
+                document.location = `user-details.html?value=${JSON.stringify(user)}`
             })
         }
 
