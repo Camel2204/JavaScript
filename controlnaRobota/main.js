@@ -8,18 +8,25 @@ fetch('https://jsonplaceholder.typicode.com/users')
             divContainer.classList.add('user-container')
             const divWithInfo = document.createElement('div');
             divWithInfo.classList.add('user-info')
-            divWithInfo.innerText = `id: ${user.id},
+            const p = document.createElement('p');
+            p.innerText = `id: ${user.id},
                  name: ${user.name}`
             const buttonAllInfo = document.createElement('button')
             buttonAllInfo.classList.add('buttonAllInfo');
             buttonAllInfo.innerHTML = "More information"
-            divWithInfo.appendChild(buttonAllInfo);
+
+
+
+            divWithInfo.append(p, buttonAllInfo);
             divContainer.appendChild(divWithInfo);
             usersBook.appendChild(divContainer);
             buttonAllInfo.addEventListener ("click", function (){
                 document.location = `user-details.html?value=${JSON.stringify(user)}`
+
+
+
+
+            })
             })
         }
-
-
     })

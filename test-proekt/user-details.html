@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Details</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #userList{
+            width: 400px;
+            height: 370px;
+            text-align: left;
+            margin-bottom: 5px;
+            border: 2px solid green;
+            border-radius: 5px;
+            padding-top: 10px;
+            background: #d0fbd0;
+        }
+        #postsUser{
+            width: 90%;
+            height: 40px;
+            margin: 1px auto;
+            background: #1db4cf;
+            border: none;
+            border: 2px solid #0b6a6a;
+            border-radius: 5px;
+            margin-top: 8px;
+        }
+        #postsUser:hover{
+            color: white;
+            width: 90.1%;
+            height: 41px;
+        }
+        #allPosts{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding-top: 20px;
+            display: none;
+        }
+        .divForPost{
+            width: 15vw;
+            height: 130px;
+            border: 2px solid green;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            padding-bottom: 10px;
+            padding-left: 10px;
+        }
+        .allPost{
+            width: 130px;
+            height: 30px;
+            background: #1db4cf;
+            border: none;
+            border: 2px solid #0b6a6a;
+            border-radius: 5px;
+            margin-top: 10px;
+            ;
+        }
+        .allPost:hover{
+            width: 132px;
+            height: 32px;
+            color: white;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <ul id="userList"></ul>
+    <button id="postsUser"><b>Post of current user</b></button>
+</div>
+
+
+<div id="allPosts"></div>
+<script src="user-details.js"></script>
+</body>
+</html>
